@@ -13,6 +13,7 @@
     public enum UserRole
     {
         Admin = 1,
-        Viewer
+        Viewer=2,
+        Salesman
     }
 }

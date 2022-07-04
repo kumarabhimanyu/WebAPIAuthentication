@@ -29,9 +29,11 @@ namespace AuthProvider.Controllers
 
                 var authClaims = new List<Claim>
                 {
-                    new Claim("Name", model.Name),
+                    new Claim(ClaimTypes.Name, model.Name),
                     new Claim(ClaimTypes.Email, model.Email),
                     new Claim(ClaimTypes.Role, model.RoleType.ToString()),
+                    new Claim(ClaimTypes.Role, "Viewer"),
+                    new Claim("DateOfJoining",DateTime.Now.AddMonths(-5).ToString()),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
 
@@ -42,6 +44,7 @@ namespace AuthProvider.Controllers
             return BadRequest();
         }
 
+        [HttpPost]
         public ActionResult LoginForAPI2([FromBody] UserApiModel model)
         {
             //You need to fist make a DB call and check that the user exists in database. If not then return from here and do not generate token.

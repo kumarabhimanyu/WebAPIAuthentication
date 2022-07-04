@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,14 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireMultipleRoles", policyBuilder =>
+    {
+        policyBuilder.RequireRole("Viewer");
+        policyBuilder.RequireClaim(ClaimTypes.Email, "abhimanyu.kumar@kelltontech.com");
+    });
+});
 
 // Add services to the container.
 
