@@ -32,8 +32,8 @@ namespace AuthProvider.Controllers
                     new Claim(ClaimTypes.Name, model.Name),
                     new Claim(ClaimTypes.Email, model.Email),
                     new Claim(ClaimTypes.Role, model.RoleType.ToString()),
-                    new Claim(ClaimTypes.Role, "Viewer"),
-                    new Claim("DateOfJoining",DateTime.Now.AddMonths(-5).ToString()),
+                    new Claim(ClaimTypes.DateOfBirth,DateTime.Now.AddYears(-20).ToString()),
+                    new Claim("Qualification","BTech"),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
 

@@ -40,10 +40,10 @@ namespace WebAPIOne.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Viewer,Admin")]
+        [Authorize(Policy= "AgeOver18")]
         public ActionResult CheckMultipleRoles()
         {
-            return Ok("Hi From Multiple Roles");
+            return Ok("Hi From Custom Policies");
         }
     }
 }

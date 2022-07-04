@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPIOne", "WebAPIOne\WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthProvider", "AuthProvider\AuthProvider.csproj", "{DFDB1AD2-D15F-4B10-A87D-01239DD1C7F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPITwo", "WebAPITwo\WebAPITwo.csproj", "{F01147F2-39B9-484C-B62E-26BC4E06638A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{DFDB1AD2-D15F-4B10-A87D-01239DD1C7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFDB1AD2-D15F-4B10-A87D-01239DD1C7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFDB1AD2-D15F-4B10-A87D-01239DD1C7F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F01147F2-39B9-484C-B62E-26BC4E06638A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F01147F2-39B9-484C-B62E-26BC4E06638A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F01147F2-39B9-484C-B62E-26BC4E06638A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F01147F2-39B9-484C-B62E-26BC4E06638A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
